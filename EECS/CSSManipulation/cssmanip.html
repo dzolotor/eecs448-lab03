@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Manipulation </title>
+        <link rel="stylesheet" type="text/css" href="myStyle.css">
+    </head>
+    <body>
+
+        <br>
+        <br>
+                
+        Border
+        <br>
+        R: <input type="text" name="red" id="bdred">(00-FF)<br>
+        G: <input type="text" name="blue" id="bdblue">(00-FF)<br>
+        B: <input type="text" name="green" id="bdgreen">(00-FF)<br>
+        Size: <input type="text" name="bdsize" id="bdsize"><br>
+        <br>
+        Background
+        <br>
+        R: <input type="text" name="bgred" id="bgred">(00-FF)<br>
+        G: <input type="text" name="bgblue" id="bgblue">(00-FF)<br>
+        B: <input type="text" name="bggreen" id="bggreen">(00-FF)<br>
+       
+        <p id="myP" border="thick solid #0000FF">This is some dummy text.</p>
+
+        <button onclick="myFunction()">Update Style</button>
+
+        <br> 
+
+        <script>
+            function myFunction()
+            {
+                var rgbBorder = document.getElementById("bdred").value;
+                rgbBorder += document.getElementById("bdblue").value;
+                rgbBorder += document.getElementById("bdgreen").value;
+
+                var bdSize = document.getElementById("bdsize").value;
+
+                document.getElementById("myP").style.border = "solid #" + rgbBorder;                
+                document.getElementById("myP").style.borderWidth = bdSize + "px";
+
+                var rgbBackground = document.getElementById("bgred").value;
+                rgbBackground += document.getElementById("bgblue").value;
+                rgbBackground += document.getElementById("bggreen").value;
+                 
+                document.getElementById("myP").style.background = "#" + rgbBackground;                
+
+                
+            }
+
+        </script>
+
+    </body>
+</html>

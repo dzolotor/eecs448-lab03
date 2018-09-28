@@ -1,0 +1,29 @@
+a:link {
+    color: blue; 
+    background-color: lightgray; 
+}
+
+a:hover
+{
+    background-color: red;
+    color: blue
+}
+
+h1
+{
+    color: white;
+    font-family: arial;
+    font-size: 22pt;
+}
+
+body
+{
+    background-color: dimgray;
+    background-image: url(background.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+P
+{background-color: darkgray;}

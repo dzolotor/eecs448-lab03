@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title> Password Validator </title>
+    </head>
+
+    <body>
+        <img id="myImg" src="boomer0.jpg" height="300" width="350">
+        <br>
+        <button onclick="prev()">Prev</button>
+        <button onclick="next()">Next</button>
+        <br> 
+
+        <script>
+            var imgs = ["boomer0.jpg", "boomer1.jpg", "boomer2.png", "boomer3.jpg", "boomer4.png"];
+
+            var currImg = 0;
+
+            function next()
+            {
+                if(currImg < 4)
+                {
+                    ++currImg;
+                }
+                else
+                {
+                    currImg = 0;
+                }
+                
+                document.getElementById("myImg").src = imgs[currImg];
+                document.getElementById("myImg").height = 300;
+                document.getElementById("myImg").width = 350;
+            }
+
+            function prev()
+            {
+                if(currImg > 0)
+                {
+                    --currImg;
+                }
+                else
+                {
+                    currImg = 4;
+                }
+                
+                document.getElementById("myImg").src = imgs[currImg]; 
+                document.getElementById("myImg").height = 300;
+                document.getElementById("myImg").width = 350;
+            }
+
+        </script>
+    </body>
+</html>
+
